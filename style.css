@@ -1,0 +1,202 @@
+:root {
+  /* Colors  */
+
+  /* Light Mode  */
+
+  --primary-bg-clr: #f4f4f4;
+  --primary-text-clr: #1f2544;
+
+  --secondary-clr: #836fff;
+
+  --right-clr: #74E291;
+  --wrong-clr: #FF8080;
+
+  /* Dark Mode  */
+  /* --primary-bg-clr: #1F2544;
+  --primary-color: #f4f4f4;
+
+  --secondary-color: #836FFF; */
+
+  /* Responsive typography */
+  --text-xxs: clamp(8px, 0.75rem + 0.2vw, 12px);
+  --text-xs: clamp(8px, 0.875rem + 0.2vw, 14px);
+  --text-sm: clamp(10px, 1.1rem + 0.25vw, 16px);
+  --text-md: clamp(12px, 1.125rem + 0.3vw, 18px);
+  --text-lg: clamp(14px, 1.25rem + 0.35vw, 20px);
+  --text-xl: clamp(16px, 1.5rem + 0.4vw, 24px);
+  --text-2xl: clamp(18px, 1.75rem + 0.5vw, 30px);
+  --text-3xl: clamp(20px, 2rem + 0.6vw, 36px);
+  --text-4xl: clamp(24px, 2.5rem + 0.7vw, 48px);
+  --text-5xl: clamp(28px, 3rem + 0.8vw, 60px);
+  --text-6xl: clamp(32px, 3.5rem + 1vw, 72px);
+  --text-7xl: clamp(36px, 4rem + 1.2vw, 96px);
+  --text-8xl: clamp(40px, 5rem + 1.5vw, 128px);
+  --text-9xl: clamp(44px, 5.5rem + 1.7vw, 144px);
+  --text-10xl: clamp(48px, 6rem + 1.9vw, 160px);
+  --text-11xl: clamp(52px, 6.5rem + 2.1vw, 176px);
+
+  /* font weights */
+  --fw-extraLight: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semiBold: 600;
+  --fw-bold: 700;
+  --fw-extraBold: 800;
+  --fw-black: 900;
+
+  --f-family-base: "Mukta", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: calc(1.4em + 0.8rem);
+  font-family: var(--f-family-base);
+  font-weight: var(--fw-regular);
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+img,
+video,
+svg,
+picture,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+/* 
+=============================================
+========= Quiz app - HEADER ==================
+=============================================
+*/
+
+body {
+  background-color: var(--primary-bg-clr);
+}
+
+.quiz-header {
+  /* background-color: red; */
+  width: 100%;
+  padding: 2rem min(4vw, 4rem) 0 min(4vw, 4rem);
+}
+
+.quiz-header>.quiz-nav>.quiz-heading {
+  font-size: var(--text-3xl);
+  font-weight: var(--fw-extraBold);
+}
+
+/* 
+=============================================
+========= Quiz app - Main ==================
+=============================================
+*/
+
+main {
+  height: 80dvh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: min(2vw, 2rem) min(3vw, 3rem);
+  /* background-color: red; */
+
+  margin-top: 3rem;
+}
+
+.quiz-category,
+.quiz-category>span,
+.quiz-question {
+  font-size: var(--text-xl);
+  font-weight: var(--fw-semiBold);
+}
+
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 3rem;
+  margin-block: 5rem;
+}
+
+.quiz-options .option {
+  display: flex;
+  gap: 1rem;
+  border: 2px solid black;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.quiz-options .option:hover {
+  cursor: pointer;
+  background-color: #F0F3FF;
+}
+
+.quiz-options .option p {
+  font-size: var(--text-md);
+  pointer-events: none;
+}
+
+.btn {
+  padding: 0.5rem 2.5rem;
+  background-color: var(--secondary-clr);
+  color: var(--primary-bg-clr);
+
+  font-size: var(--text-md);
+  font-weight: var(--fw-bold);
+  border: 2px solid var(--secondary-clr);
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+.right-ans {
+  background-color: var(--right-clr);
+}
+
+.wrong-ans {
+  background-color: var(--wrong-clr);
+}
+
+
+/* .white-bg {
+  background-color: var(--primary-bg-clr);
+}
+
+*/
+@media (max-width: 460px) {
+  .quiz-header>.quiz-nav>.quiz-heading {
+    font-size: var(--text-4xl);
+  }
+
+  .quiz-options {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .quiz-category,
+  .quiz-category>span,
+  .quiz-question {
+    font-size: var(--text-3xl);
+  }
+
+  .quiz-options .option p {
+    font-size: var(--text-2xl);
+  }
+
+  .btn {
+    font-size: var(--text-xl);
+  }
+}
+
