@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Quiz app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Google font  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <title>Quiz app</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <header class="quiz-header">
+      <nav class="quiz-nav">
+        <h1 class="quiz-heading">Quiz App</h1>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2 class="quiz-category">Category: <span></span></h2>
+        <h2 class="quiz-question"></h2>
+        <div class="quiz-options">
+          <!-- options will be added through the javascript  -->
+        </div>
+        <button class="btn next-btn">Next Question</button>
+      </section>
+    </main>
 
-<body>
-  <header class="quiz-header">
-    <nav class="quiz-nav">
-      <h1 class="quiz-heading">Quiz App</h1>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2 class="quiz-category">Category: <span></span></h2>
-      <h2 class="quiz-question"></h2>
-      <div class="quiz-options">
-        <!-- options will be added through the javascript  -->
-      </div>
-      <button class=" btn next-btn">Next Question</button>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

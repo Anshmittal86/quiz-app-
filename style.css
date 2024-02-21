@@ -138,11 +138,13 @@ main {
   border: 2px solid black;
   padding: 1rem;
   border-radius: 0.5rem;
+  scale: 1;
+  transition: scale 0.3 ease;
 }
 
 .quiz-options .option:hover {
   cursor: pointer;
-  background-color: #F0F3FF;
+  scale: 1.1;
 }
 
 .quiz-options .option p {
